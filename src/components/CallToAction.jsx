@@ -1,32 +1,24 @@
+import { ShoppingBagIcon } from "@heroicons/react/24/solid";
+
 function CallToAction() {
   return (
-    <section className="py-20 bg-gold-accent bg-gradient-to-r from-orange-100 to-yellow-200 dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-4xl font-bold text-brown-primary mb-6 dark:text-gold-accent transition-colors duration-300">
-          Oferta Especial por Tempo Limitado!
+    <section className="py-20 sm:py-24 bg-gradient-to-br from-pink-100 via-light to-yellow-100 dark:from-gray-800 dark:via-dark dark:to-gray-900">
+      <div className="container mx-auto text-center bg-white/50 dark:bg-gray-800/50 p-8 sm:p-12 rounded-2xl shadow-xl backdrop-blur-sm border border-white/30">
+        <h2 className="text-3xl lg:text-4xl font-extrabold text-primary mb-4 dark:text-accent">
+          Gostou do que Viu?
         </h2>
-        <p className="text-lg lg:text-xl text-gray-700 opacity-90 mb-8 dark:text-gray-300 transition-colors duration-300">
-          Não perca essa oportunidade única de aprender a fazer pudins incríveis
-          e conseguir uma renda extra!
+        <p className="text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto mb-10 dark:text-gray-300">
+          Clique no botão abaixo para explorar minha coleção completa na Shopee.
+          Encontre a peça perfeita para você ou para presentear quem você ama!
         </p>
-        <div className="text-2xl font-bold text-red-600 mb-6 dark:text-red-400 transition-colors duration-300">
-          De{" "}
-          <span className="line-through text-gray-500 dark:text-gray-600 transition-colors duration-300">
-            R$ 69,90
-          </span>{" "}
-          por apenas{" "}
-          <span className="text-brown-primary dark:text-yellow-400 transition-colors duration-300">
-            R$ 29,90
-          </span>
-          !
-        </div>
         <a
-          href="https://pay.hotmart.com/P99600473P"
+          href="URL_DA_SUA_LOJA_SHOPEE" // <-- COLOQUE O LINK DA SUA LOJA SHOPEE AQUI
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-brown-primary text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-brown-secondary transition-colors duration-300 inline-block"
+          className="inline-flex items-center gap-3 bg-primary text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl hover:bg-secondary transition-all duration-300 transform hover:-translate-y-1 animate-pulse-custom"
         >
-          Aproveite a Oferta Agora!
+          <ShoppingBagIcon className="h-6 w-6" />
+          <span>Ir para a Loja Agora</span>
         </a>
       </div>
     </section>

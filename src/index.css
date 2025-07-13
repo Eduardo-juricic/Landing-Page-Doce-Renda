@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #6d4c41; /* Cor primária do seu tema */
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #6d4c41; /* Cor primária do seu tema */
+}
+
+/* Estilo para Dark Mode */
+.dark .mySwiper .swiper-button-next,
+.dark .mySwiper .swiper-button-prev {
+  color: #ffd700; /* Cor de destaque (accent) do seu tema */
+}
+
+.dark .mySwiper .swiper-pagination-bullet-active {
+  background-color: #ffd700; /* Cor de destaque (accent) do seu tema */
+}

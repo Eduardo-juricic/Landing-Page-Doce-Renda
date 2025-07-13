@@ -1,29 +1,38 @@
-/* eslint-env node */
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
+
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
+      // Dentro de extend
       colors: {
-        "brown-primary": "#A0522D",
-        "brown-secondary": "#D2691E",
-        "brown-dark": "#4E342E",
-        "brown-medium": "#795548",
-        "brown-light": "#D7CCC8",
-        "gold-accent": "#FFD700",
-        cream: "#F5F5DC",
+        primary: "#6D4C41",
+        secondary: "#FFB7C5",
+        accent: "#FFD700",
+        light: "#FFF8E1",
+        dark: "#4E342E",
       },
       container: {
-        center: true,
-        padding: {
-          DEFAULT: "1rem",
-          sm: "2rem",
-          lg: "4rem",
-          xl: "5rem",
-          "2xl": "6rem",
+        // ... sua configuração de container
+      },
+      // --- ADICIONE O CÓDIGO ABAIXO ---
+      animation: {
+        "pulse-custom": "pulse-custom 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+      keyframes: {
+        "pulse-custom": {
+          "0%, 100%": {
+            opacity: 1,
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: 0.95,
+            transform: "scale(1.05)",
+          },
         },
       },
+      // --- FIM DO CÓDIGO ADICIONADO ---
     },
   },
   plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
